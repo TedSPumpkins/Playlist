@@ -15,7 +15,7 @@ private boolean liked;
      * Constructor-- what information needs to be given to make a Song?
      * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
      */
-    public Song(Myduration, Myname){
+    public Song(int Myduration, String Myname){
         duration = Myduration;
         name = Myname;
         liked= true;
@@ -31,33 +31,41 @@ private boolean liked;
       * What kind of mutator (setter) methods will you need?
       */
 
+
+//This Method returns a string telling if the song is liked or unliked
 public String getliked(){
+String likedstatus = "";
 if (liked == true){
-    return "liked";
+    likedstatus = "liked";
 }
 else{
-    return "unliked";
-}
+    likedstatus = "unliked";
 }
 
+return likedstatus;
+}
 
-      public int getduration(){
+//This Method returns the durration of a song
+public int getduration(){
 return duration;
 }
 
+//This method gets the name of a song
 public String getname(){
     return name;
     }
 
+//This method makes a song liked
 public void like(){
     liked = true;
 }
 
+//This method makes a song unliked
 public void unlike(){
     liked = false;
 }
 
-pubic String toString(){
-    return System.out.println("the duration is: " + getduration() + "the liked status is: " + getliked);
+public String toString(){
+    return "the duration is: " + duration + "the liked status is: " + getliked();
 }
 }
