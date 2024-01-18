@@ -49,6 +49,25 @@ public Playlist(){
         return playlist.toString();
     }
 
+    public ArrayList<Song> likedSongs(){
+        ArrayList<Song> likedsongs = new ArrayList<Song>();
+        for(Song s: playlist){
+            if(s.getlikedstatus() == true){
+                likedsongs.add(s);
+            }
+        }
+    return likedsongs;
+    }
     
-
+    public String totalDurration(){
+    int totaltime = 0;
+    int minutes = 0;
+    int seconds = 0;
+        for(Song s : playlist){
+            totaltime += s.getduration();
+    }
+    seconds = totaltime % 60;
+    minutes = totaltime / 60;
+    return minutes + ":" + seconds;
+    }
 }
