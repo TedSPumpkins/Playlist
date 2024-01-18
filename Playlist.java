@@ -43,6 +43,14 @@ public Playlist(){
         }
     }
 
+    public void removeSong(Song s){
+        for(Song i : playlist){
+            if(s.getname().equals(i.getname())){
+                playlist.remove(i);
+            }
+        }
+    }
+
     
 
 }
