@@ -11,17 +11,17 @@ public class PlaylistTester {
     public static void main(String[] args) {
         System.out.println("Initializing a Playlist...\n");
         //Make your playlist here
-        ArrayList<Song> playlist = new ArrayList<Song>();
+        Playlist songs = new Playlist();
     
         System.out.println("Adding songs to the Playlist...\n");
         Song A = new Song(200, "a");
         Song B = new Song(300, "b");
         Song C = new Song(400, "c");
         Song D = new Song(500, "d");
-        playlist.add(A);
-        playlist.add(B);
-        playlist.add(C);
-        playlist.add(D);
+        songs.addSong(A);
+        songs.addSong(B);
+        songs.addSong(C);
+        songs.addSong(D);
         
         /**
          * Add some songs here. Note that the format for adding a Song to a Playlist p
@@ -33,14 +33,17 @@ public class PlaylistTester {
 
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
-        System.out.println(playlist.toString());
+        System.out.println(songs.toString());
 
         System.out.println("\nLiking the songs in position X, Y, Z, etc....\n");
         //Once your songs are 'liked', this should be reflected in the next printout
+        songs.likeSong(1);
+        songs.likeSong(2);
+        songs.likeSong(3);
 
 
         System.out.println("Printing the songs...\n");
-
+        System.out.println(songs.toString());
 
         System.out.println("\nRemoving the song in position A, B, C, etc...\n");
         

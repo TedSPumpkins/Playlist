@@ -17,7 +17,7 @@ private ArrayList<Song> playlist;
       * then use additional methods to add Songs in one-by-one
       */
 public Playlist(){
-    ArrayList<Song> playlist = new ArrayList<Song>();
+    playlist = new ArrayList<Song>();
 }
 
 
@@ -35,13 +35,11 @@ public Playlist(){
         playlist.add(s1);
     }
 
-    public void likeSong(Song s2){
-        for(Song i :playlist){
-            if(s2.getname().equals(i.getname())){
-                i.getliked();
-            }
+    public void likeSong(int p){
+     playlist.get(p).like();
         }
-    }
+
+
 //Talk to ridsoto
     public void removeSong(Song s){
         for(Song i : playlist){

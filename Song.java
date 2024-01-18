@@ -18,7 +18,7 @@ private boolean liked;
 public Song(int Myduration, String Myname){
         duration = Myduration;
         name = Myname;
-        liked= true;
+        liked= false;
     }
 
      /**
@@ -33,7 +33,7 @@ public Song(int Myduration, String Myname){
 
 
 //This Method returns a string telling if the song is liked or unliked
-public String getliked(){
+public String printlikedstatus(){
 String likedstatus = "";
 if (liked == true){
     likedstatus = "liked";
@@ -43,6 +43,11 @@ else{
 }
 
 return likedstatus;
+}
+
+//Get likedstatus
+public boolean getlikedstatus(){
+    return liked;
 }
 
 //This Method returns the durration of a song
@@ -66,6 +71,6 @@ public void unlike(){
 }
 
 public String toString(){
-    return "the duration is: " + duration + "the liked status is: " + getliked();
+    return "the duration is: " + duration + " the liked status is: " + printlikedstatus();
 }
 }
