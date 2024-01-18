@@ -71,6 +71,6 @@ public void unlike(){
 }
 
 public String toString(){
-    return "the duration is: " + duration + " the liked status is: " + printlikedstatus();
+    return "the name is: " + name + " the duration is: " + duration + " the liked status is: " + printlikedstatus();
 }
 }

@@ -41,12 +41,8 @@ public Playlist(){
 
 
 //Talk to ridsoto
-    public void removeSong(Song s){
-        for(Song i : playlist){
-            if(s.getname().equals(i.getname())){
-                playlist.remove(i);
-            }
-        } 
+    public void removeSong(int num){
+     playlist.remove(num);
     }
 
     public String toString(){
