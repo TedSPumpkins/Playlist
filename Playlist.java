@@ -48,7 +48,11 @@ public Playlist(){
             if(s.getname().equals(i.getname())){
                 playlist.remove(i);
             }
-        }
+        } 
+    }
+
+    public String toString(){
+        return playlist.toString();
     }
 
     
