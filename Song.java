@@ -15,7 +15,7 @@ private boolean liked;
      * Constructor-- what information needs to be given to make a Song?
      * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
      */
-    public Song(int Myduration, String Myname){
+public Song(int Myduration, String Myname){
         duration = Myduration;
         name = Myname;
         liked= true;
