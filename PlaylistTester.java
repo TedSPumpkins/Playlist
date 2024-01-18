@@ -6,12 +6,23 @@
  * @author
  * @version
  */
+import java.util.*;
 public class PlaylistTester {
     public static void main(String[] args) {
         System.out.println("Initializing a Playlist...\n");
         //Make your playlist here
-
+        ArrayList<Song> playlist = new ArrayList<Song>();
+    
         System.out.println("Adding songs to the Playlist...\n");
+        Song A = new Song(200, "a");
+        Song B = new Song(300, "b");
+        Song C = new Song(400, "c");
+        Song D = new Song(500, "d");
+        playlist.add(A);
+        playlist.add(B);
+        playlist.add(C);
+        playlist.add(D);
+        
         /**
          * Add some songs here. Note that the format for adding a Song to a Playlist p
          * is something like...
@@ -32,7 +43,7 @@ public class PlaylistTester {
 
 
         System.out.println("\nRemoving the song in position A, B, C, etc...\n");
-
+        
 
         System.out.println("Printing the songs...\n");
 

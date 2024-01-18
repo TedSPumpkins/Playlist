@@ -42,7 +42,7 @@ public Playlist(){
             }
         }
     }
-
+//Talk to ridsoto
     public void removeSong(Song s){
         for(Song i : playlist){
             if(s.getname().equals(i.getname())){
