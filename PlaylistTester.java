@@ -18,10 +18,16 @@ public class PlaylistTester {
         Song B = new Song(300, "b");
         Song C = new Song(400, "c");
         Song D = new Song(500, "d");
+        Song E = new Song(600, "e");
+        Song F = new Song(700, "f");
+        Song G = new Song(800, "g");
         songs.addSong(A);
         songs.addSong(B);
         songs.addSong(C);
         songs.addSong(D);
+        songs.addSong(E);
+        songs.addSong(F);
+        songs.addSong(G);
         
         /**
          * Add some songs here. Note that the format for adding a Song to a Playlist p
@@ -35,28 +41,29 @@ public class PlaylistTester {
         //Print out all the songs in the playlist to verify it's working correctly
         System.out.println(songs.toString());
 
-        System.out.println("\nLiking the songs in position X, Y, Z, etc....\n");
+
+
+        System.out.println("\nLiking the songs in position 0/a, 2/c, and 4/e...\n");
         //Once your songs are 'liked', this should be reflected in the next printout
-        songs.likeSong(1);
+        songs.likeSong(0);
         songs.likeSong(2);
-        songs.likeSong(3);
+        songs.likeSong(4);
 
 
         System.out.println("Printing the songs...\n");
         System.out.println(songs.toString());
 
-        System.out.println("\nRemoving the song in position A, B, C, etc...\n");
+        System.out.println("\nRemoving the song in position ...\n");
+        songs.removeSong(5);
         songs.removeSong(3);
-        songs.removeSong(1);
-
+        //songs.removeSong(5); why does this not work?
         System.out.println("Printing the songs...\n");
         System.out.println(songs.toString());
 
+
+        
         System.out.println("\nPrinting only the liked songs...\n");
         //Your Playlist should be able to do this without looping while in main!
-        Song Hadi = new Song(2, "Whooo");
-        songs.addSong(Hadi);
-        songs.likeSong(2);
         System.out.println(songs.likedSongs().toString());
 
 
@@ -64,17 +71,12 @@ public class PlaylistTester {
         //Note that the format should look something like minutes:seconds
         System.out.println(songs.totalDurration());
 
-
-        Song Teddy = new Song(10, "Vampire");
-        songs.addSong(Teddy);
-
-        System.out.println(songs.toString());
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
         songs.removeUnliked();
-        System.out.println(songs.toString());
 
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
+        System.out.println(songs.toString());
     }
 }

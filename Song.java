@@ -51,8 +51,14 @@ public boolean getlikedstatus(){
 }
 
 //This Method returns the durration of a song
+public String getdurationasString(){
+int minutes = duration/60;
+int seconds = duration%60;
+return "(" + minutes + ":" + seconds + ")";
+}
+
 public int getduration(){
-return duration;
+    return duration;
 }
 
 //This method gets the name of a song
@@ -71,6 +77,6 @@ public void unlike(){
 }
 
 public String toString(){
-    return "the name is: " + name + " the duration is: " + duration + " the liked status is: " + printlikedstatus();
+    return "\"" + name + "\"" + getdurationasString() + "---" + printlikedstatus();
 }
 }
