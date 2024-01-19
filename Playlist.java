@@ -70,4 +70,13 @@ public Playlist(){
     minutes = totaltime / 60;
     return minutes + ":" + seconds;
     }
+
+    public void removeUnliked(){
+    for(int i = 0; i < playlist.size();i++){
+        if(playlist.get(i).getlikedstatus() == false){
+            playlist.remove(i);
+        }
+    }
+}
+
 }

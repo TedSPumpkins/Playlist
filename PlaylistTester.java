@@ -64,9 +64,15 @@ public class PlaylistTester {
         //Note that the format should look something like minutes:seconds
         System.out.println(songs.totalDurration());
 
+
+        Song Teddy = new Song(10, "Vampire");
+        songs.addSong(Teddy);
+
+        System.out.println(songs.toString());
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
-
+        songs.removeUnliked();
+        System.out.println(songs.toString());
 
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
