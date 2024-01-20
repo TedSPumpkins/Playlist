@@ -3,9 +3,12 @@
  * playlist in the main method. You don't need to follow the testing specifications of this exactly
  * if you want to write your own separate tester instead.
  * Note that there's no need for a Scanner in this project-- all of the playlist can be 'hardcoded' into main.
- * @author
- * @version
+ * @Theodore Rountree-Shtulman
+ * @Hadi Ammar
+ * @version 1/21/2024
  */
+
+
 import java.util.*;
 public class PlaylistTester {
     public static void main(String[] args) {
@@ -28,18 +31,12 @@ public class PlaylistTester {
         songs.addSong(E);
         songs.addSong(F);
         songs.addSong(G);
-        
-        /**
-         * Add some songs here. Note that the format for adding a Song to a Playlist p
-         * is something like...
-         * p.addSong(new Song(..., ..., ...))
-         */
 
 
+        System.out.println(songs.examineSongs());
 
         System.out.println("Printing the songs...\n");
-        //Print out all the songs in the playlist to verify it's working correctly
-        System.out.println(songs.toString());
+        System.out.println(songs.examineSongs());
 
 
 
@@ -51,32 +48,27 @@ public class PlaylistTester {
 
 
         System.out.println("Printing the songs...\n");
-        System.out.println(songs.toString());
+        System.out.println(songs.examineSongs());
 
-        System.out.println("\nRemoving the song in position ...\n");
-        songs.removeSong(5);
-        songs.removeSong(3);
-        //songs.removeSong(5); why does this not work?
+        System.out.println("\nRemoving the song in position 2 ...\n");
+        songs.removeSong(2);
         System.out.println("Printing the songs...\n");
-        System.out.println(songs.toString());
+        System.out.println(songs.examineSongs());
 
 
         
         System.out.println("\nPrinting only the liked songs...\n");
-        //Your Playlist should be able to do this without looping while in main!
-        System.out.println(songs.likedSongs().toString());
+        System.out.println(songs.likedSongs());
 
 
         System.out.println("\nPrinting the total duration of all songs...\n");
-        //Note that the format should look something like minutes:seconds
         System.out.println(songs.totalDurration());
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
-        //This should be doable with a single method call
         songs.removeUnliked();
 
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
-        System.out.println(songs.toString());
+        System.out.println(songs.examineSongs());
     }
 }

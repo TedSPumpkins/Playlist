@@ -40,23 +40,27 @@ public Playlist(){
         }
 
 
-//Talk to ridsoto
     public void removeSong(int num){
      playlist.remove(num);
     }
 
-    public String toString(){
-        return playlist.toString();
-    }
 
-    public ArrayList<Song> likedSongs(){
-        ArrayList<Song> likedsongs = new ArrayList<Song>();
+    public String examineSongs(){
+        String songs = "";
+        for(Song i :playlist){
+            songs += i.toString() + "\n";
+        }
+        return songs;
+
+    }
+    public String likedSongs(){
+       String likedSongs = "";
         for(Song s: playlist){
             if(s.getlikedstatus() == true){
-                likedsongs.add(s);
+               likedSongs += s.toString() + "\n";
             }
         }
-    return likedsongs;
+    return likedSongs;
     }
     
     public String totalDurration(){
@@ -79,4 +83,7 @@ public Playlist(){
     }
 }
 
+public String toString(){
+    return playlist.toString();
+}
 }
