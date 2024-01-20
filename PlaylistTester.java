@@ -31,10 +31,6 @@ public class PlaylistTester {
         songs.addSong(E);
         songs.addSong(F);
         songs.addSong(G);
-
-
-        System.out.println(songs.examineSongs());
-
         System.out.println("Printing the songs...\n");
         System.out.println(songs.examineSongs());
 
@@ -45,12 +41,10 @@ public class PlaylistTester {
         songs.likeSong(0);
         songs.likeSong(2);
         songs.likeSong(4);
-
-
         System.out.println("Printing the songs...\n");
         System.out.println(songs.examineSongs());
 
-        System.out.println("\nRemoving the song in position 2 ...\n");
+        System.out.println("\nRemoving the song in position 2(c) ...\n");
         songs.removeSong(2);
         System.out.println("Printing the songs...\n");
         System.out.println(songs.examineSongs());

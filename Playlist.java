@@ -16,6 +16,7 @@ private ArrayList<Song> playlist;
       * Constructor-- this doesn't need any parameters. You should just initialize the ArrayList and
       * then use additional methods to add Songs in one-by-one
       */
+
 public Playlist(){
     playlist = new ArrayList<Song>();
 }
@@ -79,6 +80,7 @@ public Playlist(){
     for(int i = 0; i < playlist.size();i++){
         if(playlist.get(i).getlikedstatus() == false){
             playlist.remove(i);
+            i--;
         }
     }
 }
