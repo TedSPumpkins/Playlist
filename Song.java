@@ -7,7 +7,7 @@ public class Song {
     //Fields-- what information do we want each Song to store?
 private int duration;
 private String name;
-private boolean liked;
+private boolean liked; 
 
 
 
