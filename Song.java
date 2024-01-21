@@ -5,7 +5,7 @@
  */
 public class Song {
     //Fields-- what information do we want each Song to store?
-private int duration;
+private int duration; //intitializing duration name and liked variable
 private String name;
 private boolean liked; 
 
@@ -15,10 +15,10 @@ private boolean liked;
      * Constructor-- what information needs to be given to make a Song?
      * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
      */
-public Song(int Myduration, String Myname){
+public Song(int Myduration, String Myname){ //contructing song object
         duration = Myduration;
         name = Myname;
-        liked= false;
+        liked= false; //songs are initially unliked
     }
 
      /**
@@ -34,9 +34,9 @@ public Song(int Myduration, String Myname){
 
 //This Method returns a string telling if the song is liked or unliked
 public String printlikedstatus(){
-String likedstatus = "";
+String likedstatus = "";  //creates empty string
 if (liked == true){
-    likedstatus = "liked";
+    likedstatus = "liked"; //sets string value to liked on condition that the boolean value is true. 
 }
 else{
     likedstatus = "unliked";
@@ -51,9 +51,9 @@ public boolean getlikedstatus(){
 }
 
 //This Method returns the durration of a song
-public String getdurationasString(){
-int minutes = duration/60;
-int seconds = duration%60;
+public String getdurationasString(){ 
+int minutes = duration/60; //duration is in seconds, to the /60 tranfers this into the # of minutes
+int seconds = duration%60; //remiander
 return "(" + minutes + ":" + seconds + ")";
 }
 
